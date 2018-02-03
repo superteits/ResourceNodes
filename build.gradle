@@ -1,0 +1,25 @@
+plugins {
+    id 'org.spongepowered.plugin' version '0.8.1'
+}
+
+sourceCompatibility = 1.8
+
+group = 'br.github.superteits'
+version = '1.1.0'
+description = 'Nodes for the incredible Khyr creation.'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.spongepowered.org/maven/'
+       // url 'https://repo.lucko.me/'
+    }
+}
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:7.0.0-SNAPSHOT'
+    //compile 'me.lucko.luckperms:luckperms-api:3.3'
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
